@@ -1,0 +1,49 @@
+/* Tooltip styles */
+.soon-card {
+    position: relative;
+    cursor: help;
+}
+
+.soon-card::after {
+    content: "Coming Soon";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--color-accent-primary);
+    color: var(--color-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.soon-card:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.soon-card::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border: 6px solid transparent;
+    border-top-color: var(--color-accent-primary);
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 10;
+    margin-bottom: -12px;
+}
+
+.soon-card:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}

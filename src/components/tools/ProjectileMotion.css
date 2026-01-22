@@ -1,0 +1,68 @@
+.projectile-tool {
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.value-display {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color-accent-physics);
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--color-accent-physics);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.result-card {
+    background: rgba(255, 145, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 145, 0, 0.2);
+}
+
+.result-label {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.result-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-physics);
+}
+
+@media (max-width: 600px) {
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+}

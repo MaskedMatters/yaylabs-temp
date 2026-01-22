@@ -1,0 +1,40 @@
+.molar-mass-tool {
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.chemistry-btn {
+    background: var(--color-accent-chemistry);
+    color: white;
+}
+
+.chemistry-btn:hover {
+    background: #aa00ff;
+}
+
+.input-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input-row input {
+    flex-grow: 1;
+}
+
+.result-display {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(213, 0, 249, 0.1);
+    border: 1px solid var(--color-accent-chemistry);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-chemistry);
+}

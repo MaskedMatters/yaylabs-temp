@@ -1,0 +1,57 @@
+.base-converter {
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.converter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-field label {
+    color: var(--color-accent-cs);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input-field input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    width: 100%;
+    /* Ensure it fits container */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.input-field input:focus {
+    border-color: var(--color-accent-cs);
+    outline: none;
+}
+
+.tool-note {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .converter-grid {
+        grid-template-columns: 1fr;
+    }
+}
