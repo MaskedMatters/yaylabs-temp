@@ -60,3 +60,33 @@
 .card p {
     color: var(--color-text-secondary);
 }
+
+/* CS Page Collage Layout */
+.cs-collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.collage-item {
+    height: 100%;
+    min-height: 300px;
+    /* Ensure some height consistency */
+}
+
+.collage-item.wide {
+    grid-column: 1 / -1;
+    /* Span full width initially if desired, or let auto-fit handle */
+}
+
+@media (min-width: 1024px) {
+    .cs-collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .collage-item.wide {
+        grid-column: 1 / -1;
+    }
+}
